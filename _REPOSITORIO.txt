@@ -1,1 +1,11 @@
+- Link do repositório:
 https://github.com/arturbazza/03Exercicio.git
+
+- Teste no Postman:
+CEP: 90040341
+
+http://localhost:8080/address/90040341
+
+- Print Screem:
+Posrman: _PS_CEP90040341.jpg
+MySQL: _PS_BD_MYSQL.jpg
