@@ -1,0 +1,93 @@
+Em portugues do brasil
+
+Amigo, preciso de ajuda para implementar a solicitação abaixo.
+
+Orientações para você Chat:
+
+1- A classes separadas e completas (todo o código desenvolvido)
+2- A estrutura contêm : Model, Controllers, Services, Repository
+3- A consulta vai enviar o CEP para a API e retornar o endereço. Tenho que colocar este retorno no meu banco em localhost para teste que estarei usando o MySQL no endereço http://localhost:8080/atividade03. Este retorno é o endereço que tenho que inserir no mei banco local.
+
+A solicitação para executar o projeto:
+
+Atividade 03
+Última atualização:
+Hoje at 7:31 pm
+Utilize os princípios SOLID, DRY E KISS para criar uma API receba um código de CEP e salve o endereço em uma base de dados e imediatamente retorne o endereço salvo, crie uma API para listar endereços.
+
+Banco de dados é opcional
+
+A API deve consumir os serviços:
+
+https://viacep.com.br/
+
+https://brasilapi.com.br/
+
+https://www.cepaberto.com/
+
+
+
+O sistema deve ser parametrizável sobre qual api usar. Deve existir uma configuração que habilita multiplos providers como fallback:
+
+
+
+Configurações
+
+Chave
+
+Valor
+
+Função
+
+app.cep.api
+
+VIACEP
+
+BRASILAPI
+
+CEPABERTO
+
+Modifica qual api é usada pelo backend para buscar o cep
+
+app.cep.fallback
+
+true
+
+false
+
+Se true ignora a config app.cep-api e usa todas em uma ordem predefinida
+
+app.cep.fallback-order
+
+VIACEP,CEPABERTO,BRASILAPI
+
+Modifica a ordem de precedencia entre as apis de consulta de CEP
+
+Ordem de precedência padrão para o consumo das API (app.cep.fallback=true)
+
+VIACEP
+
+CEPABERTO
+
+BRASILAPI
+
+Caso o CEP não seja localizado deve retornar 404 NOT FOUND
+
+O backend deve ser feito em spring boot
+
+Deve-se criar classes de Request e *Response*
+
+
+
+Para consumo externo da API pode-se usar o HttpClient nativo do java ou o RestTemplate do spring boot.
+
+Documentação de referencia:
+
+
+
+https://spring.io/guides/gs/consuming-rest
+
+Examplo:
+
+Quote quote = restTemplate.getForObject(
+					"http://localhost:8080/api/random", Quote.class);
