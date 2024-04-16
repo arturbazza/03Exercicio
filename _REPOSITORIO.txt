@@ -7,5 +7,5 @@ CEP: 90040341
 http://localhost:8080/address/90040341
 
 - Print Screem:
-Posrman: _PS_CEP90040341.jpg
+Postman: _PS_CEP90040341.jpg
 MySQL: _PS_BD_MYSQL.jpg
